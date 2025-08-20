@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <MARQUEE>
+        <img src="waydi.jpg">
+    </MARQUEE>
+    <hi>Bài 3</hi>
+    <!--danh sách (list)-->
+    <!--có thứ tự ol,li-->
+    <p>danh sách công việc buổi sáng</p>
+    <ol>
+        <li>Thức dậy</li>
+        <li>Đánh răng</li>
+        <li>Ăn sáng</li>
+        <li>Đi học</li>
+        <li>Gỉai lao</li>
+    </ol>
+    <!-- không thứ tự ul,li-->
+     <p>Các ngôn ngữ lập trình web</p>
+     <ul>
+        <li>Python</li>
+        <li>PHP</li>
+        <li>Javascript</li>
+        <li>C#</li>
+     </ul>
+
+     <h1>Form</h1>
+     <form>
+        <div>
+        <b>Họ và Tên: </b>
+        <input type="text" name="hoten" placeholder="Nhập tên vào đây">
+        </div>
+        <div>
+        <b>Năm: </b>
+        <input type="text" name="nam" placeholder="2025" readonly>(readonly:cố định nội dung)
+        </div>
+        <div>
+        <b>Giới thiệu chi tiết về bản thân: </b>
+        <br>
+        <textarea name="gioithieu">Nhập giới thiệu....</textarea>
+        </div>
+        <div>
+        <b>Email: </b>
+        <input type="email" name="email" placeholder="Dạng @gmail.com">
+        </div>
+        <br>
+        <b>Số điện thoại</b> <br>
+        <input name="sodienthoai" 
+        type="tel" placeholder="Dạng số: 1-23456-789"
+        required pattern="([0]{1}{0,3,9}{1})({0-9}{8})">
+        <br>
+        <div>
+            <b>Giới tính</b> <br>
+            <input type="radio" name="gioitinh" value="nam"> Nam <br>
+             <input type="radio" name="gioitinh" value="nu"> Nữ <br>
+              <input type="radio" name="gioitinh" value="khongxacdinh"> Không xác định <br>
+        </div>
+        <br>
+        <div>
+            <b>Sở thích</b> <br>
+            Game: <input type="checkbox" name="sothich" value="game"> <br>
+            Music: <input type="checkbox" name="sothich" value="music"> <br>
+            Sport: <input type="checkbox" name="sothich" value="sport"> <br>
+        </div>
+        <br>
+        <div>
+            <b>Trình duyệt ưa thích</b>
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explore">
+                <option value="Firefox">
+                <option value="TruyenQQ">
+                <option value="Haiten">
+            </datalist>
+        </div>
+        <br>
+        <select name="browsers" id=""></select>
+                <option value="Internet Explore">Internet Explore</option>
+                <option value="Firefox">Firefox</option>
+                <option value="TruyenQQ">TruyenQQ</option>
+                <option value="Haiten">Haiten</option>
+         </select>
+         <br>
+         <div>
+            0 <input type="range" value="50"> 100
+         </div>
+         <br>
+         <div>
+            <b>Tuổi</b>
+            <input type="number" name="tuoi" step="3.6">
+         </div>
+         <div>
+            <b>Ngày tháng năm</b>
+            <input type="date" name="ngaythangnamsinh">
+         </div>
+         <div>
+            <b>Màu sắc</b>
+            <input type="color" name="mausacyeuthich">
+         </div>
+         <br>
+         <div>
+            <b>Ảnh đại diện</b>
+            <input type="file">
+         </div>
+         <br>
+         <div>
+            <b>Mật khẩu</b>
+            <input type="password">
+         </div>
+         <br>
+         <div>
+            <input type="reset">
+         </div>
+        <div>
+            <input type="Submit">
+        </div>
+     </form>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/_9NIgnow2P4?si=i3swxLvS02MGFd_u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+   <video controls width="500" height="300">
+    <source src="ok.mp4" type="video/mp4">
+   </video>
+   <br>
+   <audio controls>
+    <source src="..." type="...">
+   </audio>
+
+</html>
