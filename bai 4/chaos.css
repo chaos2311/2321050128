@@ -1,0 +1,29 @@
+h3{
+    color: blueviolet;
+}
+
+#title {
+    background-color: aquamarine;
+}
+
+.bg {
+    background-color: darksalmon;
+}
+
+p {
+    color: red;
+    background-color: blue;
+}
+.box1{
+    background-color: darkgreen;
+  /* gtri1 la tren duoi, 2 la trai phai*/
+   /* margin: 50px 100px 100px 20px*/
+    margin: 50px auto;
+    width: 50%;
+}
+.box2{
+    background-color: greenyellow;
+}
+.box3{
+    background-color: darkmagenta;
+}
