@@ -1,0 +1,54 @@
+Khi viết CSS, bạn có thể gõ chữ tắt + Tab để sinh code nhanh:
+
+Gõ	Kết quả
+m10	        margin: 10px;
+p20	        padding: 20px;
+bgc#333	    background-color: #333;
+d:f	        display: flex;
+jc:c	    justify-content: center;
+ai:c	    align-items: center;
+w100	    width: 100px;
+h100	    height: 100px;
+pos:a	    position: absolute;
+ov:h	    overflow: hidden;
+
+Đây là sức mạnh của Emmet — có sẵn trong VS Code, giúp code nhanh hơn 5–10 lần.
+
+1.5. Phím tắt quản lý tab & split screen
+Tổ hợp phím	Chức năng
+Ctrl + W	Đóng file hiện tại
+Ctrl + Shift + T	Mở lại file vừa đóng
+Ctrl + \	Chia đôi màn hình code
+Ctrl + 1/2/3	Di chuyển giữa các panel khi split screen
+Ctrl + B	Ẩn/hiện sidebar trái
+
+1.1. Phím tắt điều hướng & mở nhanh
+Tổ hợp phím	Chức năng
+Ctrl + P	Mở nhanh file trong project
+Ctrl + Shift + N	Tạo cửa sổ VS Code mới
+Ctrl + Shift + T	Mở lại file vừa đóng
+Ctrl + Tab	Chuyển qua lại giữa các file đang mở
+Ctrl + Shift + E	Mở/ẩn Explorer để quản lý file
+Ctrl + Shift + P hoặc F1	Mở Command Palette – nơi chạy các lệnh trong VS Code
+
+1.2. Phím tắt chỉnh sửa code nhanh
+Tổ hợp phím	Chức năng
+Ctrl + /	Bật/tắt comment cho dòng hiện tại
+Alt + ↑ / ↓	Di chuyển dòng code lên/xuống
+Shift + Alt + ↑ / ↓	Nhân đôi dòng code hiện tại
+Ctrl + Shift + K	Xóa nhanh dòng hiện tại
+Ctrl + Shift + \	Nhảy đến thẻ đóng/mở HTML hoặc dấu ngoặc tương ứng
+Alt + Click	Đặt nhiều con trỏ cùng lúc (multi-cursor)
+Ctrl + D	Chọn nhanh từ/cụm từ tiếp theo giống với từ đang chọn
+Ctrl + Shift + L	Chọn tất cả các từ giống nhau trong file
+Shift + Alt + F	Tự động format code đẹp gọn
+Ctrl + K + C	Comment khối code được chọn
+Ctrl + K + U	Bỏ comment khối code được chọn
+
+
+1.3. Phím tắt tìm kiếm & thay thế
+Tổ hợp phím	Chức năng
+Ctrl + F	Tìm kiếm trong file hiện tại
+Ctrl + H	Tìm và thay thế trong file hiện tại
+Ctrl + Shift + F	Tìm kiếm trên toàn bộ project
+Ctrl + Shift + H	Tìm và thay thế trên toàn project
