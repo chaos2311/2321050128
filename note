@@ -1,0 +1,49 @@
+color: red;                 /* Màu chữ */
+font-size: 16px;            /* Cỡ chữ */
+font-weight: bold;          /* Độ đậm (normal, bold, 100–900) */
+font-style: italic;         /* Kiểu chữ (italic, normal) */
+font-family: Arial, sans-serif; /* Phông chữ */
+text-align: center;         /* Căn chữ (left, right, center, justify) */
+line-height: 1.5;           /* Khoảng cách giữa các dòng */
+letter-spacing: 2px;        /* Khoảng cách giữa các ký tự */
+text-decoration: underline; /* Trang trí chữ (underline, none, line-through) */
+text-transform: uppercase;  /* Chuyển đổi chữ (uppercase, lowercase, capitalize) */
+
+/* ==================== BOX MODEL ==================== */
+width: 200px;               /* Chiều rộng */
+height: 100px;              /* Chiều cao */
+max-width: 500px;           /* Chiều rộng tối đa */
+min-width: 200px;           /* Chiều rộng tối thiểu */
+margin: 20px;               /* Khoảng cách ngoài */
+padding: 10px;              /* Khoảng cách trong */
+border: 2px solid black;    /* Viền (dày, kiểu, màu) */
+border-radius: 10px;        /* Bo góc */
+box-sizing: border-box;     /* Tính cả border + padding vào width/height */
+
+/* ==================== LAYOUT ==================== */
+display: flex;              /* Kiểu hiển thị (block, inline, flex, grid, none) */
+position: relative;         /* Vị trí (static, relative, absolute, fixed, sticky) */
+top: 10px;                  /* Cách trên 10px (khi có position) */
+z-index: 5;                 /* Thứ tự chồng lớp */
+float: left;                /* Đẩy sang trái */
+clear: both;                /* Ngăn float ảnh hưởng */
+overflow: hidden;           /* Ẩn nội dung tràn */
+
+/* ==================== BACKGROUND ==================== */
+background-color: lightblue;       /* Màu nền */
+background-image: url("bg.jpg");   /* Ảnh nền */
+background-repeat: no-repeat;      /* Không lặp ảnh nền */
+background-size: cover;            /* Ảnh phủ toàn khung */
+background-position: center;       /* Ảnh ở giữa */
+
+/* ==================== IMAGE ==================== */
+object-fit: cover;          /* Ảnh vừa khung (cover, contain, fill) */
+object-position: top;       /* Vị trí ảnh trong khung */
+
+
+/* ==================== INTERACTIONS ==================== */
+cursor: pointer;            /* Con trỏ chuột khi hover */
+a:link { color: blue; }     /* Link bình thường */
+a:visited { color: purple; }/* Link đã click */
+a:hover { color: red; }     /* Khi rê chuột */
+a:active { color: orange; } /* Khi click xuống */

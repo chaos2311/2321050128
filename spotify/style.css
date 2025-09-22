@@ -1,0 +1,96 @@
+body {
+    background-color: black;
+    margin: 0;
+    color: white;
+}
+.container {
+    width: 30%;
+    background-color: black;
+    margin: 40px auto;
+    height: 750px;
+}
+.noidung {
+    width: 100%;
+    margin: auto;
+}
+.form {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.khoi-nut {
+    margin-bottom: 15px;
+}
+.p {
+    text-align: left;
+}
+input {
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid gray ;
+    padding: 10px 0;
+    margin-bottom: 15px;
+
+}
+.next {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+    background-color: rgb(67, 164, 67);
+    color: black;
+    border: none;
+}
+.noidung-tren {
+    border-bottom: 2px solid black;
+}
+.h2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline flex;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+.khoi-nut img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 10px;
+}
+footer {
+    width: 100%;
+    /* position: fixed: ghim footer vào màn hình */ 
+    bottom: 0;
+    background-color: black;
+    text-align: center;
+}
+.tieude-footer {
+    font-size: x-small;
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+}
+a {
+    color: gray;
+}
+a:hover {
+    color: rgb(75, 174, 75);
+}

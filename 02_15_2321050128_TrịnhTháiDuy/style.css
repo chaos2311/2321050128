@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+header div{
+    padding: 10px;
+}
+.left-container {
+    font-size: larger;
+    text-align: left;
+    gap: 100px;
+}
+.right-container {
+    gap: 50px;
+    display:flex;
+}
+.a {
+    text-decoration:none;
+    color: black;
+}
+.anhbenphai {
+    width: 50%;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.danhmuc-trai{
+    width: 20%;
+}
+.danhmuc-giua{
+    width: 40%;
+    justify-content: center;
+}
+
+.anhbenphai{
+    width: 40%;
+
+}
