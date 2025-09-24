@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="b8.js"></script>
+</head>
+<body>
+    <script>
+        let thongTinDonHang = {
+            thongTinKhachHang: {
+            maDonHang: "123",
+            hoTen: "Khach Hang",
+            soDienThoai: 1234,
+            trangThaiThanhVien: "Gold",
+        },
+            danhSachSanPham: {
+            sP1: {   
+            mSP: "123",
+            tSP: "cà phê",
+            soLuong: 123 ,
+            cost: 10000 ,
+        },
+         sP2: {   
+            mSP: "123" ,
+            tSP: "matcha" ,
+            soLuong: 123 ,
+            cost: 10000 ,
+        },
+         sP3: {   
+            mSP: "123" ,
+            tSP: "trà sữa" ,
+            soLuong: 123 ,
+            cost: 200000 ,
+        },
+    },
+    
+         trangThaiThanhToan: true,
+         diaChiGiaoHang: "Hanoi",
+        }
+        let tongSP1 = thongTinDonHang.danhSachSanPham.sP1.cost * thongTinDonHang.danhSachSanPham.sP1.soLuong;
+        let tongSP2 = thongTinDonHang.danhSachSanPham.sP2.cost * thongTinDonHang.danhSachSanPham.sP2.soLuong;
+        let tongSP3 = thongTinDonHang.danhSachSanPham.sP3.cost * thongTinDonHang.danhSachSanPham.sP3.soLuong;
+
+        let tongTien = tongSP1 + tongSP2 + tongSP3;
+
+         var myString = "Hello Zuy";
+        // document.writeln(myString[3]);
+        
+
+        // var myString = "Hello Zuy";
+        // document.writeln(myString.slice(1, 4));
+        // document.writeln(myString.replace("Hello", "Hi"));thay thế chuỗi
+        // document.writeln(myString.toUpperCase() + 'br';
+        // document.writeln(myString.includes('e')) //kiểm tra trong chuỗi có kí tự đỏ hồng 0
+        // document.writeln(myString.split("1"));tách chuỗi thành mảng
+        // let danhSach = ["trinh duy" , "duy pk"]
+        // document.writeln(danhSach[1].startsWith('trinh'));
+        let so = "114";
+        document.writeln(typeof (so));
+        document.writeln(typeof (Number(so)));
+        var pi = 3.1456;
+        document.writeln(pi.toFixed(2)); 
+        // isNaN(NaN); //kết quả true
+        // isNaN(10); //kết quả: true
+        //new Date():ngày giờ hiện tại
+        let toDay = new Date();
+        document.writeln(toDay.getDay());
+        //new Date('2025-09-08'):ngày giờ cu thể
+    </script>
+</body>
+</html>
