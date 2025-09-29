@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b9</title>
+    <script src="b9.js"></script>
+
+</head>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 'a', 'b', 'c',5, 6];
+
+        document.writeln(arr.length);
+        //document.writeln(arr[3]);=> đọc phần tử trong mảng.
+        //document.writeln(arr.indexOf('a'));=> tìm kiếm vị trí của phần tử có trong mảng.
+        //.....................lastIndexof(5));=> vị trí cuối cùng mà phần tử đó xuất hiện trong mảng.
+        //.................(Array.isArray(a));=> kiểm tra xem thành phần có phải kiểu chuỗi hay ko?.
+    //     let a, b, c, d;
+    //     a = [1, 2, 3, 4];
+    //     b = "Javascript";
+    //     c = [42, "VBscript"];
+    //     d = a.concat(b, c);
+    //    // document.writeln(d);
+    //    // document.writeln(d.join("-"))=> thêm vào giữa các phần tử thành phần đã khai báo
+    //     d[3] = 4;
+    //     //document.writeln(.pop);=> bỏ đi phần tử cuối cùng  khỏi mảng.
+    //     //................(push); => thêm 1 phần tử trong mảng vào vị trí cuối cùng.
+    //     // ................shift(); => xóa phần tử đầu tiên
+    //     //.................unshift(); => thêm phần tử vào đầu mảng.    arr.unshift(0);
+    //     document.writeln(d);
+    let toDay = new Date();
+    let now = toDay.getHours(); //11
+
+    if (now < 10) {
+        document.writeln("Chao buoi sang");
+    } else if (now >= 10 && now <= 12) {
+        document.writeln("Good noon");
+    } else if (now >= 12 && now <= 17) {
+        document.writeln("Good after noon");
+    } else if (now >= 17 && now <= 22) {
+        document.writeln("Good evening ");
+    } else{ (now >= 22 && now <= 24) 
+        document.writeln("Good night");
+ }
+    let so = "100000000000000000000000000000003";
+   // document.writeln(so.length - 1)
+   let soCuoiCung = parseInt(so[so.length - 1]);
+ //kiemtra la chan hay le
+    if (soCuoiCung % 2 == 0) {
+        document.writeln("so chan");
+      }
+       else {
+        document.writeln("la so le");
+        }
+    
+       true&&false
+       
+    </script>
+
+<body>
+
+
+    
+</body>
+</html>
