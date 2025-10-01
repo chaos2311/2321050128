@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let N1 = prompt("nhập số ");
+        N1 = parseFloat(N1);
+        function check(N1) {
+            if (N1 % 2 == 0) {
+                document.writeln(" laso chan");
+            }
+            else {
+                document.writeln("la so le");
+            }
+        }
+        //!isNaN=> phủ định của isNOTaNumber
+        if (!isNaN(N1)) {
+            document.writeln(typeof (N1));
+            check(N1);
+        } else {
+            document.writeln("vui lòng nhập vào số!");
+
+        }
+
+
+
+
+
+        //alert("xin chao ban");
+        // let result = confirm("press a button");
+        // document.writeln(result);
+        // if (result == true) {
+        //     document.writeln("press ok" + "<br>");
+        // }else {
+        //     document.writeln("press cancel" + "<br>");
+        // }
+
+        // let result2 = prompt("some text", "default value");
+        // document.writeln(result2);
+        //hàm o có tham số
+        function sayHello() {
+            document.writeln("Hello");
+        }
+
+
+        // function sayHello2(name, age) {
+        //     document.writeln("hello" + name + " " + age + " tuổi ");
+        // }
+
+        // let nameP = prompt("Tên", "full name ");
+        // let ageP = prompt("Tuổi", "Điền tuổi ");
+
+        sayHello2(nameP, ageP);
+
+
+        let toDay = new Date();
+        //chu nhat la 0, thu 2 la 1, thu 3 la 2,.....
+        let theDay = toDay.getDay();
+        document.writeln(theDay);
+        switch (theDay) {
+            //kiem tra co phai thu 6 ko?
+            case 5:
+                document.writeln("Finally thursday");
+                break;
+            //  kiem tra co phai thu 5 khong?
+            case 6:
+                document.writeln("super saturday");
+                break;
+            //kiem tra co phai chu nhat ko
+            case 0:
+                document.writeln("sleep sunday");
+                break;
+            default:
+                document.writeln("i,m looking for ward ...")
+
+        }
+        let arrNum = [0, 1, 2, 3, 4, 5]
+        // for (let i = 1; i <= 1000; i++) {
+        //     document.writeln(i + "anh xin loi! <br>");
+        // }
+        document.writeln(arrNum.lenghth)
+        for (let j = 0; j < arrNum.length; j++) {
+            document.writeln(arrNum[j] + "<br>");
+        }
+
+        let danhSach = ["Lương Ngọc	Bích ", "Dương Gia Bình ", "Nguyễn Như Thành	Danh ", "Hoàng Xuân	Duẩn ", "Hà Văn	Dũng"]
+        for (let k = 0; k < danhSach.length; k++) {
+            document.writeln("Xin Chao " + danhSach[k] + "<br>");
+        }
+        let m = 0;
+        while (i <= 20) {
+            document.writeln("The number is" + i + "<br>");
+            i = i + 1;
+        }
+    </script>
+
+</body>
+
+</html>
