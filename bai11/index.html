@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 11</title>
+    <link rel="javascript" href="style.js">
+
+</head>
+<body>
+    <h1>Bài 11</h1>
+    <div>
+        Điểm A: <input id="diemA" type="number" placeholder="Nhập điểm A"> <br>
+        Điểm B: <input id="diemB" type="number" placeholder="Nhập điểm B"> <br>
+        Điểm C: <input id="diemC" type="number" placeholder="Nhập điểm C"> <br>
+    </div>
+    <div>
+        <button onclick="xemKetQua()">Tính điểm</button> <br>
+        kết quả: <input id="ketQua" type="number">
+    </div>
+    <script>
+        function xemKetQua(){   
+            let diemA = parseFloat(document.getElementById('diemA').value);
+            let diemB = parseFloat(document.getElementById('diemB').value);
+            let diemC = parseFloat(document.getElementById('diemC').value);
+            let sum = tinhDiem(diemA, diemB, diemC);
+            let ketqua = document.getElementById('ketQua').value = sum;
+        }
+        function tinhDiem(A, B, C){
+            if(check(A) && check(B) && check(C)){
+                return A*0.6 + B*0.3 + C*0.1;
+            }
+            else{
+                return null;
+            }
+        }
+        function check(num){
+            if(typeof(num) === 'number' && num >= 0 && num <=10){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        console.log("Sum: "+ tinhDiem('10', 9, 10));
+    </script>
+    
+</body>
+</html>
