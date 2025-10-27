@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 12</title>
+</head>
+<style>
+    body {
+        transition: background-color 0.3s, color 0.3s;
+        justify-content: center;
+        text-align: center;
+        margin-top: 40px;
+        background-color: rgb(244, 252, 194);
+    }
+
+    h1,
+    h2 {
+        color: brown;
+        transition: color 0.3s;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        transition: filter 0.3s;
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2 {
+        color: aquamarine;
+    }
+
+    body.dark-mode {
+        background-color: #333;
+    }
+
+    body.dark-mode img {
+        filter: invert(100%);
+    }
+</style>
+
+<body>
+
+    <h1>Light Mode</h1>
+    <div>
+        <div class="all">
+            <img src="download (1).jpg" alt="">
+        </div>
+        <h2>Đổi chế độ</h2>
+        <div class="cuoi">
+            <button onclick="changeMode()">change mode</button>
+        </div>
+    </div>
+    <script>
+        // function changeMode() {
+        //     document.getElementsByTagName('body')[0].style = 'background-color: blue';
+        //     document.getElementsByTagName('h2')[1].innerHTML = 'Dark Mode';
+        //     document.getElementsByTagName('h2')[0].style = 'color: white';
+        //     document.getElementsByTagName('h2')[1].style = 'color: white';
+        // }
+
+        function changeMode() {
+            let body = document.body;
+            let h1 = document.querySelector('h1');
+
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                h1.innerHTML = "Dark Mode";
+            } else {
+                h1.innerHTML = "Light Mode";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

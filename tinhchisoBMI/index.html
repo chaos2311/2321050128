@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Tính chỉ số BMI</h1>
+    <div>
+        Cân nặng: <input id="weiGht" type="number" placeholder="Nhập cân nặng của bạn"> <br>
+        Chiều cao: <input id="heiGht" type="number" placeholder="Nhập chiều cao của bạn">
+    </div>
+    <div>
+        Kiểm tra: <button onclick="caculateBmi()"></button>
+        <input id="ketQua" type="number">
+    </div>
+    <script>
+        let weiGht = parseFloat(document.getElementById('weiGht').value);
+        let heiGht = parseFloat(document.getElementById('heiGht').value);
+
+        let userBmi = caculateBmi(weiGht, heiGht).toFixed(2);
+        let ketqua = parseFloat(document.getElementById('ketQua')).value = userBmi;
+        const caculateBmi = (weiGht, heiGht) => {
+            return (weiGht / (heiGht * heiGht));
+        }
+        let phanLoai = '';
+        let imageUrl = '';
+        function xepLoaiBmi(userBmi) {
+            if(bMi > 40) {
+                phanLoai = 'beo phi nang'
+                imageUrl = 'beonang.png'
+            } else if{
+                
+            }
+
+
+        }
+    </script>
+    </script>
+</body>
+
+</html>
