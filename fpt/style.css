@@ -4,15 +4,33 @@ body {
 
 header {
     background-color: black;
-    display: flex;
+    position: fixed;
+    z-index: 1;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     background-color: black;
-    width: 70%;
+    width: 75%;
     margin: auto;
+}
+
+.ti-menu {
+    color: #fff;
+    display: block;
+    text-align: right;
+    font-size: 20px;
+
+}
+
+.ti-menu {
+    cursor: pointer;
+}
+
+.side-bar li {
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .danhmuc {
@@ -24,43 +42,25 @@ header {
 
 .logo {
     width: 15%;
-    cursor: pointer;
 }
 
-ul {
+header ul {
     list-style: none;
     display: flex;
     padding: 0;
     gap: 20px
 }
 
-a {
+header a {
     text-decoration: none;
-    cursor: pointer;
     font-weight: bolder;
     color: #9b9b9b;
     font-size: 16px;
     font-family: "SFProDisplay", Arial, sans-serif;
 }
 
-a:hover {
-    color: orange;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.header-right i {
-    font-size: 18px;
-    cursor: pointer;
-    color: white;
-}
-
-.header-right i:hover {
-    color: orange;
+header a:hover {
+    color: #FF6500;
 }
 
 .chucnang {
@@ -69,13 +69,39 @@ a:hover {
     gap: 20px;
 }
 
+.icon {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.ti-bell:hover,
+.ti-search:hover {
+    color: #FF6500;
+    cursor: pointer;
+}
+
 .muagoi {
-    background-color: #e93013;
+    background-color: #FF6500;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 13px 11px;
     width: 100px;
     border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.muagoi i {
+    margin-left: 5px;
+}
+
+.muagoi:hover {
+    opacity: 0.9;
 }
 
 .dangnhap {
@@ -86,13 +112,16 @@ a:hover {
 }
 
 .dangnhap:hover {
-    color: orange;
+    color: #FF6500;
+    cursor: pointer;
 }
 
 main {
     background-color: #131314;
     color: white;
     width: 100%;
+    /* height: 1000px; */
+    font-family: "SFProDisplay", Arial, sans-serif;
 }
 
 .quangcao {
@@ -100,15 +129,100 @@ main {
     justify-content: center;
 }
 
-.container {
+.quangcao img {
     width: 75%;
+    margin-bottom: 15px;
+    margin-top: 75px;
+}
+
+.container img:hover,
+.quangcao img:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 77%;
     background-color: black;
     /* height: 1000px; */
     margin: auto;
+
 }
 
 .banner {
-    width: 98%;
+    width: 99%;
+
+}
+
+.div {
+    position: relative;
+}
+
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tieude-phim ul {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+
+}
+
+.tieude-phim a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.tieude-phim {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+
+}
+
+.watch {
+    background-color: #FF6500;
+    border-radius: 8px;
+    color: #fff;
+    padding: 14px 40px;
+    margin: 10px 0px 14px 40px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.watch:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.watch-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    margin: 20px 0px 20px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #202020;
+}
+
+.ti-share,
+.ti-heart {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+
+}
+
+.ti-share:hover {
+    color: #FF6500;
 }
 
 .qc {
@@ -118,119 +232,146 @@ main {
 }
 
 .tentheloai {
-    margin: 0 0 16px;
-    color: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-
-}
-
-.anh:hover {
-    transform: scale(150deg);
-    transition: 2s;
+    margin: 20px 20px 20px 15px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .danhsach {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
-}
-
-.theloaiphim {
-    position: relative;
-    display: inline-block;
-}
-
-.anhtheloai {
-    width: 95%;
-}
-
-.anhtheloai img {
-    width: 170px;
-    height: 99px;
-    border-radius: 5px;
+    margin: 20px 10px 0px 10px;
+    gap: 10px;
 
 }
 
-.center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.phim {
-    width: 19%;
+.danhsach img:hover {
+    cursor: pointer;
+    transform: scale(1.1) translateY(-10px);
 }
 
 .phim img {
     width: 100%;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    height: 5px;
+.ten {
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 footer {
     background-color: #131314;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    font-family: "SFProDisplay", Arial, sans-serif;
+
 }
 
-.footer-container {
-    width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-column {
-    flex: 1;
-    width: 200px;
-}
-
-.footer-logo img {
-    width: 120px;
-    margin-bottom: 10px;
-}
-
-.footer-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.footer-links a {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
+footer a {
     text-decoration: none;
+    font-weight: bolder;
+    color: #9b9b9b;
+    font-size: 16px;
+    font-family: "SFProDisplay", Arial, sans-serif;
 }
 
-.footer-mangxh img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    background-color: black;
-    border: none;
+.footer-content {
+    width: 100%;
+    height: 100%;
+    background-color: #131314;
+    font-family: "SFProDisplay", Arial, sans-serif;
 }
 
-.footer-bottom {
-    font-size: 13px;
+.content-con img {
+    width: 50%;
+    margin: 10px 0px 0px 20px
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+
+}
+
+.content-con {
+    width: 25%;
+    margin-top: 75px;
+    border-top: 1px solid rgb(69, 65, 65);
+    border-bottom: 1px solid rgb(69, 65, 65);
+
+}
+
+.content-con li {
+    list-style: none;
+    padding: 5px 0px;
+
+}
+
+.content-con li a:hover {
+    color: #FF6500;
+}
+
+.content-con ul {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.content-con a {
+    font-size: 14px;
+}
+
+.content-con p {
+    font-size: 14px;
+}
+
+.content-con i {
+    padding: 0px 10px;
+    color: #fff;
+
+}
+
+.content-con .duongdan-logo {
+    margin-left: 50px;
+}
+
+.content-con i:hover {
+    color: #FF6500;
+    cursor: pointer;
+}
+
+#hotline {
+    color: #fff;
+    margin-left: 50px;
+}
+
+.footer-info {
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    display: flex;
+}
+
+.footer-left {
+    width: 70%;
+    margin-left: 75px;
+    text-align: justify;
+}
+
+.footer-left p {
+    color: #fff;
+    margin: 0;
+    width: 80%;
+    font-size: 11px;
+    padding-left: 135px;
+    line-height: 1.4;
+}
+
+.footer-right {
+    width: 30%;
     color: gray;
 }
 
-::-webkit-scrollbar-track {
-    background: white;
-    border-radius: 4px 4px 4px 4px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #888;
+.footer-right i {
+    margin-left: 10px;
 }

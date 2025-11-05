@@ -1,0 +1,110 @@
+@media(min-width: 1024px){
+    .ti-menu{
+        display: none;
+    }
+    .hidden{
+        display: none;
+    }
+    .side-bar{
+        opacity: 0;
+    }
+}
+@media((min-width: 768px) and (max-width: 1023px)){
+    .header-container{
+        width: 90%;
+    }
+    .logo{
+        width: 20%;
+    }
+    .danhmuc-danhsach{
+        display: none;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #fff;
+        margin: 0;
+        width: 100%;
+    }
+    .content-con{
+        width: 100%;
+        border: none;
+        margin: 0;
+    }
+    .content-con ul{
+        margin: 0;
+    }
+    .content-con img{
+        width: 40%;
+        margin-left: 30px;
+    }
+    .footer-content{
+        background-color: #000;
+    }
+
+    .quangcao{
+        padding: 0;
+    }
+    .quangcao img, .container{
+        width: 100%;
+        background-color: #0d0d0c;
+    }
+    .footer-info{
+        display: block;
+    }
+    .footer-left{
+        width: 90%;
+        margin-left: 40px;
+    }
+    .footer-right{
+        margin-top: 20px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .footer-left p{
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+    }
+    
+}
+@media(max-width: 740px){
+    main{
+        width: 100vh !important;
+    }
+    footer{
+        width: 100vh !important;
+    }
+    .quangcao img, .container{
+        width: 100%;
+    }
+    .quangcao img{
+        margin-top: 90px;
+    }
+   
+     .header-container{
+        width: 90%;
+        height: 90px;
+        
+    }
+    .dangnhap{
+        display: none;
+    }
+    .icon{
+        font-size: 30px;
+    }
+    .logo{
+        width: 60%;
+    }
+    .danhmuc-danhsach{
+        display: none;
+    }
+    .side-bar{
+        height: 100%;
+        margin-top: 54px;
+    }
+}

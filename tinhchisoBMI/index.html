@@ -1,43 +1,160 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tính chỉ số BMI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(90, 226, 241);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /*view point height 1vh = 1% màn hình*/
+            /* e.em = 16px */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+        }
+
+        .calculator {
+            width: 320px;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .input-main {
+            margin-bottom: 15px;
+        }
+
+        input#ketQua {
+            background-color: #c716af;
+            font-weight: bold;
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background-color: #15af6f;
+            color: rgb(219, 88, 88);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #16dccf;
+        }
+
+        .image-result {
+            width: 200px;
+            text-align: center;
+        }
+
+        #hinhAnhMinhHoa {
+            width: 200px;
+            max-height: 350px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 
 <body>
-    <h1> Tính chỉ số BMI</h1>
-    <div>
-        Cân nặng: <input id="weiGht" type="number" placeholder="Nhập cân nặng của bạn"> <br>
-        Chiều cao: <input id="heiGht" type="number" placeholder="Nhập chiều cao của bạn">
+
+    <div class="container">
+
+        <div class="calculator">
+            <h1>Tính chỉ số BMI</h1>
+
+            <div class="input-main">
+                Cân nặng (kg):
+                <input class="weight" id="weiGht" type="number" placeholder="Nhập cân nặng (số nguyên)">
+            </div>
+
+            <div class="input-group">
+                Chiều cao (m):
+                <input class="height" id="heiGht" type="number" placeholder="Nhập chiều cao (vd: 1.7)">
+            </div>
+
+            <div>
+                <button onclick="xuLyTinhToan()">Kiểm tra</button>
+                Kết quả: <input id="ketQua" type="text">
+            </div>
+
+        </div>
+
+        <div class="image-result">
+            <img id="hinhAnhMinhHoa" src="image.png" alt="Hình ảnh BMI">
+        </div>
+
     </div>
-    <div>
-        Kiểm tra: <button onclick="caculateBmi()"></button>
-        <input id="ketQua" type="number">
-    </div>
+
     <script>
-        let weiGht = parseFloat(document.getElementById('weiGht').value);
-        let heiGht = parseFloat(document.getElementById('heiGht').value);
-
-        let userBmi = caculateBmi(weiGht, heiGht).toFixed(2);
-        let ketqua = parseFloat(document.getElementById('ketQua')).value = userBmi;
-        const caculateBmi = (weiGht, heiGht) => {
-            return (weiGht / (heiGht * heiGht));
-        }
-        let phanLoai = '';
-        let imageUrl = '';
-        function xepLoaiBmi(userBmi) {
-            if(bMi > 40) {
-                phanLoai = 'beo phi nang'
-                imageUrl = 'beonang.png'
-            } else if{
-                
+        const tinhBMI = (weight, height) => {
+            if (check(weight) && check(height)) {
+                return (weight / (height * height));
             }
-
-
         }
-    </script>
+        function xuLyTinhToan() {
+            let weiGht = parseFloat(document.getElementById('weiGht').value);
+            let heiGht = parseFloat(document.getElementById('heiGht').value);
+            if (!weiGht || !heiGht || weiGht <= 0 || heiGht <= 0) {
+                alert(" Vui lòng nhập đầy đủ và chính xác cân nặng, chiều cao ");
+                return;
+            }
+            else {
+                let bmi = tinhBMI(weiGht, heiGht);
+                document.getElementById('ketQua').value = bmi.toFixed(2);
+                xepLoaiBmi(bmi);
+
+            }
+        }
+        let anh = document.getElementById('hinhAnhMinhHoa');
+        function xepLoaiBmi(userBmi) {
+
+            if (userBmi <= 18.5) {
+                anh.src = 'thieu.png';
+                
+            } else if (userBmi >= 18.5 && userBmi <= 24.9) {
+                anh.src = 'binhthuong.png';
+
+            } else if (userBmi >= 25 && userBmi <= 29.9) {
+                anh.src = 'thua.png';
+
+            } else if (userBmi >= 30 && userBmi <= 39.9) {
+                anh.src = 'beocapdo1.png';
+
+            } else {
+                anh.src = 'beonang.png';
+
+            }
+        }
+        function check(num) {
+            if (typeof (num) === 'number' && num >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
     </script>
 </body>
 
