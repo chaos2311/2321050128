@@ -50,6 +50,21 @@
         }else{
             echo 'tổng là ' .$tong. 'nhỏ hơn 36';
         }
+        //8. Switch case
+        $color = "red";
+        switch($color){
+            case "red":
+                echo "is red";
+                break;
+            case "blue":
+                echo "is blue";
+                break;
+            default:
+                echo "no color";
+                break;
+        }
+        //9: for
+        
 
 
     ?>
