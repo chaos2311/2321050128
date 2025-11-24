@@ -61,11 +61,12 @@
                         alt="">
                     <div class="tieude-phim">
                         <ul>
-                            <a href="">2014</a>
+                            <a class="year" href="">2014</a>
                             <li>T16</li>
-                            <li>2 giờ 36 phút</li>
+                            <li class="duration">2 giờ 36 phút</li>
                             <li class="from">Trung Quốc</li>
                         </ul>
+
                         <div class="watch-icon">
                             <button onclick="trailer()" class="watch"><i class="ti-control-play"></i>Xem ngay</button>
                             <div class="circle">
@@ -530,6 +531,9 @@
                 name: 'Hai muối',
                 type: 'Ấm áp bên người thân',
                 banner: 'haimuoi.png',
+                duration: '2 giờ 49 phút',
+                country: 'Mỹ',
+                year: '2021',
                 trailer: '<iframe id="trailer" width="1039" height="435" src="https://www.youtube.com/embed/MjxPoqCvvVs" title="HAI MUỐI | DỰ KIẾN KHỞI CHIẾU 30.08.2024 | OFFICIAL TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
             },
             {
@@ -537,6 +541,9 @@
                 name: 'Bố già',
                 type: 'Ấm áp bên người thân',
                 banner: 'bogia.png',
+                duration: '2 giờ 00 phút',
+                country: 'Hoa Thanh Quế',
+                year: '2022',
                 trailer: '<iframe id="trailer" width="928" height="522" src="https://www.youtube.com/embed/jluSu8Rw6YE" title="BỐ GIÀ - khởi chiếu 12/03/2021/ OFFICIAL TRAILER / TRẤN THÀNH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
             },
             {
@@ -544,6 +551,9 @@
                 name: 'Cô giáo hào môn',
                 type: 'Ấm áp bên người thân',
                 banner: 'codauhaomon.png',
+                duration: '1 giờ 49 phút',
+                country: 'Nga',
+                year: '2023',
                 trailer: '<iframe id="trailer" width="928" height="522" src="https://www.youtube.com/embed/QJ8E9R70csY" title="CÔ DÂU HÀO MÔN OFFICIAL TRAILER - KC: 18.10.2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
             },
             {
@@ -551,6 +561,9 @@
                 name: 'Mai',
                 type: 'Ấm áp bên người thân',
                 banner: 'mai.png',
+                duration: '1 giờ 53 phút',
+                country: 'Pháp',
+                year: '2024',
                 trailer: '<iframe id="trailer" width="928" height="522" src="https://www.youtube.com/embed/Yz96EBNwMGw" title="MAI [First Look Trailer] - Một bộ phim mới của Trấn Thành - Khởi chiếu mùng 1 Tết 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
             },
             {
@@ -558,6 +571,9 @@
                 name: 'Ngôi nhà bươm bướm',
                 type: 'Ấm áp bên người thân',
                 banner: 'ngoinhabuombuom.png',
+                duration: '1 giờ 11 phút',
+                country: 'Anh',
+                year: '2025',
                 trailer: '<iframe id="trailer" width="928" height="522" src="https://www.youtube.com/embed/qbioI9M6Ho0" title="Ngôi Nhà Bươm Bướm | Trailer | Dự kiến khởi chiếu 30.08.2019" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
             }
 
@@ -572,12 +588,19 @@
                 banner.src = list.banner;
                 let container = document.querySelector('.container-trailer');
                 container.innerHTML = list.trailer; // ghi vào container listTL để 0 bị reload
-                let from = document.querySelector('.from');
-                from.textContent = 'Việt Nam';
+                
+                let durationNow = document.querySelector('.duration');
+                let countryNow = document.querySelector('.from');
+                let yearNow = document.querySelector('.year')
+                yearNow.textContent = list.year;
+                durationNow.textContent = list.duration;
+                countryNow.textContent = list.country;
+
                 let contentPhim = document.querySelector('.tieude-phim ul');
                 let but = document.querySelector('.watch-icon');
                 contentPhim.style.display = 'flex';
                 but.style.display = 'flex';
+
             }
         }
         function trailer() {

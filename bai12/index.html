@@ -45,33 +45,55 @@
     <h1>Light Mode</h1>
     <div>
         <div class="all">
+            <h2> Ví dụ về đổi chế độ (event)</h2>
             <img src="download (1).jpg" alt="">
         </div>
         <h2>Đổi chế độ</h2>
         <div class="cuoi">
-            <button onclick="changeMode()">change mode</button>
+            <button onclick="changeMode()">Change Mode</button>
         </div>
     </div>
-    <script>
+   <script>
+    document.writeln("Chế độ mặc định: Light");
+    let modeNow = "light";
+
+    alert("Chế độ hiện tại: " + modeNow);
+
+    function changeMode() {
+      let body = document.getElementsByTagName('body')[0];
+      let h1 = document.getElementsByTagName('h1')[0];
+      let h2_1 = document.getElementsByTagName('h2')[0];
+      let h2_2 = document.getElementsByTagName('h2')[1];
+      let img = document.getElementsByTagName('img')[0];
+
+      if (modeNow == "light") {
+        body.style.backgroundColor = "black";
+        h1.style.color = "aquamarine";
+        h2_1.style.color = "white";
+        h2_2.innerHTML = "Dark Mode";
+        img.src = "color.jpg"; // ảnh dark mode
+        modeNow = "dark"; // cập nhật trạng thái
+      } else {
+        body.style.backgroundColor = "white";
+        h1.style.color = "brown";
+        h2_1.style.color = "brown";
+        h2_2.innerHTML = "Light Mode";
+        img.src = "download (1).jpg"; // ảnh sáng lại
+        modeNow = "light"; // cập nhật trạng thái
+      }
+    }
         // function changeMode() {
-        //     document.getElementsByTagName('body')[0].style = 'background-color: blue';
-        //     document.getElementsByTagName('h2')[1].innerHTML = 'Dark Mode';
-        //     document.getElementsByTagName('h2')[0].style = 'color: white';
-        //     document.getElementsByTagName('h2')[1].style = 'color: white';
+        //     let body = document.body;
+        //     let h1 = document.querySelector('h1');
+
+        //     body.classList.toggle('dark-mode');
+
+        //     if (body.classList.contains('dark-mode')) {
+        //         h1.innerHTML = "Dark Mode";
+        //     } else {
+        //         h1.innerHTML = "Light Mode";
+        //     }
         // }
-
-        function changeMode() {
-            let body = document.body;
-            let h1 = document.querySelector('h1');
-
-            body.classList.toggle('dark-mode');
-
-            if (body.classList.contains('dark-mode')) {
-                h1.innerHTML = "Dark Mode";
-            } else {
-                h1.innerHTML = "Light Mode";
-            }
-        }
 
     </script>
 

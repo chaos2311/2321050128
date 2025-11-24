@@ -180,8 +180,6 @@ iframe {
     position: absolute;
     left: 0;
     bottom: 0;
-
-
 }
 
 .watch {
@@ -365,6 +363,7 @@ footer a {
     font-size: 11px;
     padding-left: 135px;
     line-height: 1.4;
+    margin-bottom: 12px;
 }
 
 .footer-right {
